@@ -1,9 +1,19 @@
+import { HomePage } from './pages/HomePage/HomePage'
+import { HeroesPage } from './pages/HeroesPage/HeroesPage'
+import GlobalStyle from './GlobalStyle'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/heroes" exact component={HeroesPage} />
+      </Switch>
+
+    </Router>
+
   );
 }
 
