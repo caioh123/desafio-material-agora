@@ -1,13 +1,13 @@
 import { ButtonContent, Container, InfoContent, PokeName, Price, Type, TypesContent } from './HeroCard.elements';
 
-export const HeroCard = ({ name, image }) => {
+export const HeroCard = ({ name, image, publisher }) => {
   return (
     <Container>
       <InfoContent>
         <img src={image} />
-        <PokeName> {name} </PokeName>
+        <PokeName> {publisher} </PokeName>
 
-        <Price> 40 </Price>
+        <Price> {name} </Price>
       </InfoContent>
       <ButtonContent >
         <p>Clique aqui para acessar detalhes</p>
