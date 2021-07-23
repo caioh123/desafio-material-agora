@@ -41,12 +41,26 @@ export const HeroTitle = styled.h1`
   margin-bottom: 5px;
 `;
 
+export const HeroTitleStats = styled.h2`
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+`;
+
 export const HeroFullName = styled.p`
   font-size: 1.5rem;
+  width: 100%;
+  margin-left: 50px;
 `;
 
 export const HeroGender = styled.h2`
   opacity: 0.5;
 `;
 
-export const StatsContainer = styled.section``;
+export const StatusContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  flex-direction: column;
+`;
+
+export const StatContainer = styled.div``;
