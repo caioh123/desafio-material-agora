@@ -21,6 +21,14 @@ export const Container = styled.div`
   }
 `;
 
+export const HeroContainer = styled.div`
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 60px;
+`;
+
 export const MainSectionDetails = styled.section`
   width: 50%;
   height: 50%;
@@ -44,6 +52,7 @@ export const HeroTitle = styled.h1`
 export const HeroTitleStats = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 5px;
+  margin-top: 50px;
 `;
 
 export const HeroFullName = styled.p`
@@ -63,4 +72,18 @@ export const StatusContainer = styled.section`
   flex-direction: column;
 `;
 
-export const StatContainer = styled.div``;
+export const StatContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 80vh;
+`;
+
+export const StatTitle = styled.p`
+  font-size: 1.5rem;
+`;
+
+export const StatValue = styled.p`
+  font-size: 1.3rem;
+  margin-left: 15px;
+`;

@@ -12,6 +12,9 @@ import {
   StatusContainer,
   StatContainer,
   HeroTitleStats,
+  StatValue,
+  StatTitle,
+  HeroContainer,
 } from "./HeroDetails.elements";
 import axios from "axios";
 
@@ -44,10 +47,10 @@ export const HeroDetails = () => {
             <Container>
               <img alt={hero.name} src={hero.image.url} />
               <MainSectionDetails>
-                <div>
+                <HeroContainer>
                   <HeroTitle>{hero.name}</HeroTitle>
                   <HeroGender>{hero.appearance.gender}</HeroGender>
-                </div>
+                </HeroContainer>
                 <AliasesContainer>
                   <HeroTitle>Apelido:</HeroTitle>
                   <HeroFullName>
@@ -59,24 +62,28 @@ export const HeroDetails = () => {
                 <StatusContainer>
                   <HeroTitleStats>Status de poder</HeroTitleStats>
                   <StatContainer>
-                    Inteligência:{hero.powerstats.intelligence}
+                    <StatTitle>Inteligência: </StatTitle>
+                    <StatValue>{hero.powerstats.intelligence}</StatValue>
                   </StatContainer>
                   <StatContainer>
-                    Força:
-                    {hero.powerstats.strength}
+                    <StatTitle>Força:</StatTitle>
+                    <StatValue>{hero.powerstats.strength}</StatValue>
                   </StatContainer>
                   <StatContainer>
-                    Velocidade:{hero.powerstats.speed}
+                    <StatTitle>Velocidade:</StatTitle>
+                    <StatValue>{hero.powerstats.speed}</StatValue>
                   </StatContainer>
                   <StatContainer>
-                    Durabilidade:{hero.powerstats.durability}
+                    <StatTitle>Durabilidade:</StatTitle>
+                    <StatValue>{hero.powerstats.durability}</StatValue>
                   </StatContainer>
                   <StatContainer>
-                    Poder:
-                    {hero.powerstats.power}
+                    <StatTitle>Poder:</StatTitle>
+                    <StatValue>{hero.powerstats.power}</StatValue>
                   </StatContainer>
                   <StatContainer>
-                    Combate:{hero.powerstats.combat}
+                    <StatTitle>Combate:</StatTitle>
+                    <StatValue>{hero.powerstats.combat}</StatValue>
                   </StatContainer>
                 </StatusContainer>
               </MainSectionDetails>
