@@ -76,8 +76,7 @@ export const InputContainer = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.section`
-  align-items: center;
-  display: flex;
-  justify-content: center;
+export const EmptyInput = styled.p`
+  font-size: 1.6rem;
+  color: black;
 `;

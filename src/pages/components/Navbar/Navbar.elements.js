@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
-  background: black;
+  background: rgb(25, 25, 32);
   display: flex;
   max-width: 100%;
   justify-content: space-around;
@@ -33,7 +33,7 @@ export const NavLogo = styled(Link)`
   display: flex;
   justify-content: center;
   .img {
-    width: 100px;
+    width: 120px;
     height: 90px;
     display: block;
   }

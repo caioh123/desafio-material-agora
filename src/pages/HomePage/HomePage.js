@@ -1,15 +1,31 @@
 import React from "react";
-import { Container, Overlay, SubmitButton } from "./HomePage.elements";
+import {
+  LeftContainer,
+  Overlay,
+  SubmitButton,
+  RightContainer,
+  MainContainer,
+  MainTitle,
+  MainRightContainer,
+  MainDesc,
+} from "./HomePage.elements";
 
 export const HomePage = () => {
   return (
-    <>
-      <Overlay />
-      <Container>
-        <SubmitButton to="/heroes">
-          Clique aqui para escolher seu herói e salvar o mundo!
-        </SubmitButton>
-      </Container>
-    </>
+    <MainContainer>
+      <LeftContainer>
+        <Overlay />
+      </LeftContainer>
+      <RightContainer>
+        <MainRightContainer>
+          <MainTitle>O mundo corre grande perigo</MainTitle>
+          <MainDesc>
+            O planeta Terra está prestes a ser destruído e só você pode nos
+            ajudar escolhendo o herói de sua preferência para salvar o mundo
+          </MainDesc>
+          <SubmitButton to="/heroes">Acessar a lista</SubmitButton>
+        </MainRightContainer>
+      </RightContainer>
+    </MainContainer>
   );
 };

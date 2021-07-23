@@ -10,14 +10,27 @@ export const MainContainer = styled.main`
 export const Container = styled.div`
   padding: 30px;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 24px;
   width: 80%;
   margin: 30px auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   img {
     height: 50vh;
+  }
+
+  @media (max-width: 1000px) {
+    img {
+      display: none;
+    }
+  }
+
+  @media (max-width: 376px) {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
 `;
 
@@ -31,7 +44,7 @@ export const HeroContainer = styled.div`
 
 export const MainSectionDetails = styled.section`
   width: 50%;
-  height: 50%;
+  height: 70%;
   display: flex;
   flex-direction: column;
 `;
@@ -41,12 +54,17 @@ export const AliasesContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  width: 60%;
+  width: 100%;
 `;
 
 export const HeroTitle = styled.h1`
   font-size: 2rem;
   margin-bottom: 5px;
+  width: 300px;
+
+  @media (max-width: 376px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const HeroTitleStats = styled.h2`
@@ -86,4 +104,41 @@ export const StatTitle = styled.p`
 export const StatValue = styled.p`
   font-size: 1.3rem;
   margin-left: 15px;
+`;
+
+export const SubmitButton = styled.button`
+  width: 300px;
+  margin-top: 30px;
+  height: 45px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: #835afd;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  border: 0;
+
+  transition: filter 0.2s;
+
+  @media (max-width: 670px) {
+    width: 250px;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 376px) {
+    margin-top: 80px;
+    width: 210px;
+  }
+`;
+
+export const ButtonText = styled.p`
+  font-size: 1.1rem;
+
+  @media (max-width: 376px) {
+    font-size: 1rem;
+  }
 `;

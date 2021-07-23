@@ -1,43 +1,86 @@
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
+export const MainContainer = styled.main`
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(25, 25, 32);
+`;
 
+export const LeftContainer = styled.section`
+  border-radius: 50%;
+  width: 50%;
+  background-image: url("https://media2.giphy.com/media/10ADhj1QPawFna/giphy.gif?cid=790b76115cc079a96d68734d4973c9b0");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90%;
+  display: flex;
+  align-self: center;
+`;
 
-export const Container = styled.div`
-flex: 1;
-width: 100vw;
-height: 100vh;
-background-image: url("https://media2.giphy.com/media/10ADhj1QPawFna/giphy.gif?cid=790b76115cc079a96d68734d4973c9b0");
-background-repeat: no-repeat;
-background-size: cover;
-display: flex;
-justify-content: center;
-align-items: center;
-`
+export const RightContainer = styled.section`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const Overlay = styled.div`
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2;
-    position: absolute;
-`
+  border-radius: 49%;
+  width: 50%;
+  height: 90%;
+  top: 10;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  position: absolute;
+`;
+
+export const ButtonContainer = styled.div``;
 
 export const SubmitButton = styled(Link)`
-  box-shadow: 3px 4px 0px 0px #899599;
-  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-  background-color: #ededed;
-  border-radius: 15px;
-  border: 1px solid #d6bcd6;
+  box-shadow: inset 1px 2px 2px 1px #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 42px;
+  border: 1px solid #dcdcdc;
   display: inline-block;
   cursor: pointer;
-  color: #000000;
-  font-family: Arial;
-  font-size: 17px;
-  padding: 7px 25px;
+  color: #000;
+  font-family: Verdana;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 7px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #e1e2ed;
-  margin-top: 10px;
-  z-index: 3;
-`
+  align-self: center;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+`;
+
+export const MainRightContainer = styled.div`
+  padding: 30px;
+  background: #fff;
+  border-radius: 24px;
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 60%;
+`;
+
+export const MainTitle = styled.h1`
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  max-width: 90%;
+  align-self: center;
+`;
+
+export const MainDesc = styled.p`
+  font-size: 1.5rem;
+  opacity: 0.8;
+`;

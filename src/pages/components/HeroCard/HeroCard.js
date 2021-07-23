@@ -4,7 +4,8 @@ import {
   ButtonContent,
   Container,
   InfoContent,
-  Price,
+  HeroName,
+  ButtonText,
 } from "./HeroCard.elements";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -15,14 +16,14 @@ export const HeroCard = ({ name, image, id }) => {
   useEffect(() => {
     const fetchResults = async () => {
       const response = await axios.get(
-        `https://www.superheroapi.com/api.php/10219177700206566/${id}`
+        `https://www.superheroapi.com/api.php/${process.env.REACT_APP_KEY_API}/${id}`
       );
 
       setHero(response.data);
     };
 
     fetchResults();
-  }, []);
+  }, [id]);
 
   return (
     <Link to={`/hero/details/${hero.id}`}>
@@ -30,10 +31,10 @@ export const HeroCard = ({ name, image, id }) => {
         <InfoContent>
           <img alt={name} src={image} />
 
-          <Price>{name}</Price>
+          <HeroName>{name}</HeroName>
         </InfoContent>
         <ButtonContent>
-          <p>Clique aqui para acessar detalhes</p>
+          <ButtonText>Clique aqui para acessar detalhes</ButtonText>
         </ButtonContent>
       </Container>
     </Link>

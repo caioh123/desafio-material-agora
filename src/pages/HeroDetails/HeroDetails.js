@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Navbar } from "../components/Navbar/Navbar";
 import { useParams } from "react-router";
 import {
@@ -14,7 +16,9 @@ import {
   HeroTitleStats,
   StatValue,
   StatTitle,
+  SubmitButton,
   HeroContainer,
+  ButtonText,
 } from "./HeroDetails.elements";
 import axios from "axios";
 
@@ -26,21 +30,45 @@ export const HeroDetails = () => {
   useEffect(() => {
     const fetchResults = async () => {
       const response = await axios.get(
-        `https://www.superheroapi.com/api.php/10219177700206566/${id}`
+        `https://www.superheroapi.com/api.php/${process.env.REACT_APP_KEY_API}/${id}`
       );
 
       setHero(response.data);
     };
 
-    console.log(hero);
     fetchResults();
-  }, []);
+  }, [id]);
 
-  console.log(hero);
+  const notify = () =>
+    toast.success(
+      `Parabéns, voce escolheu o(a) herói ${hero.name} para salvar o mundo!`,
+      {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      }
+    );
 
   return (
     <>
       <Navbar />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      {/* Same as */}
+      <ToastContainer />
       <MainContainer>
         {hero.name && (
           <>
@@ -86,6 +114,11 @@ export const HeroDetails = () => {
                     <StatValue>{hero.powerstats.combat}</StatValue>
                   </StatContainer>
                 </StatusContainer>
+                <SubmitButton onClick={notify}>
+                  <ButtonText>
+                    Escolher esse herói para salvar o mundo
+                  </ButtonText>
+                </SubmitButton>
               </MainSectionDetails>
             </Container>
           </>

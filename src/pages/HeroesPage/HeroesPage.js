@@ -5,7 +5,9 @@ import {
   Container,
   InputContainer,
   CategoryTitle,
+  EmptyInput,
 } from "./HeroesPage.elements";
+import axios from "axios";
 
 export const HeroesPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -16,12 +18,11 @@ export const HeroesPage = () => {
   const set = new Set(publishers);
 
   const searchSuperHeroes = async () => {
-    const response = await fetch(
-      `https://www.superheroapi.com/api.php/10219177700206566/search/${searchText}`
+    const response = await axios.get(
+      `https://www.superheroapi.com/api.php/${process.env.REACT_APP_KEY_API}/search/${searchText}`
     );
-    const data = await response.json();
 
-    setSuperheroData(data.results);
+    setSuperheroData(response.data.results);
   };
 
   const handleChange = (e) => {
@@ -31,7 +32,7 @@ export const HeroesPage = () => {
     if (searchTerm.length === 0) {
       setSuperheroData([]);
     }
-    if (searchTerm.length > 2) {
+    if (searchTerm.length > 1) {
       searchSuperHeroes();
     }
   };
@@ -49,8 +50,8 @@ export const HeroesPage = () => {
 
       <Container>
         {!![...set].length ? (
-          [...set].map((publisher) => (
-            <>
+          [...set].map((publisher, index) => (
+            <React.Fragment key={index}>
               <CategoryTitle>{publisher}</CategoryTitle>
               {superheroData.map((hero, index) => {
                 return hero.biography.publisher === publisher ? (
@@ -63,10 +64,19 @@ export const HeroesPage = () => {
                   />
                 ) : null;
               })}
-            </>
+            </React.Fragment>
           ))
         ) : (
-          <p>o</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
+            <EmptyInput>
+              Por favor, busque o nome do herói na barra de pesquisa acima
+            </EmptyInput>
+          </div>
         )}
       </Container>
     </>
