@@ -9,23 +9,33 @@ import {
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export const HeroCard = ({ name, image, publisher, handleDetails, id }) => {
+export const HeroCard = ({ name, image, id }) => {
   const [hero, setHero] = useState({});
 
   useEffect(() => {
-    axios.get(`https://www.superheroapi.com/api.php/10219177700206566/${id}`);
+    const fetchResults = async () => {
+      const response = await axios.get(
+        `https://www.superheroapi.com/api.php/10219177700206566/${id}`
+      );
+
+      setHero(response.data);
+    };
+
+    fetchResults();
   }, []);
 
   return (
-    <Container onClick={() => handleDetails(id)}>
-      <InfoContent>
-        <img alt={name} src={image} />
+    <Link to={`/hero/details/${hero.id}`}>
+      <Container>
+        <InfoContent>
+          <img alt={name} src={image} />
 
-        <Price>{name}</Price>
-      </InfoContent>
-      <ButtonContent>
-        <p>Clique aqui para acessar detalhes</p>
-      </ButtonContent>
-    </Container>
+          <Price>{name}</Price>
+        </InfoContent>
+        <ButtonContent>
+          <p>Clique aqui para acessar detalhes</p>
+        </ButtonContent>
+      </Container>
+    </Link>
   );
 };

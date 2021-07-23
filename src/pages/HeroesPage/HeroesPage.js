@@ -36,10 +36,6 @@ export const HeroesPage = () => {
     }
   };
 
-  const handleDetails = (id) => {
-    console.log(id);
-  };
-
   return (
     <>
       <Navbar />
@@ -59,7 +55,6 @@ export const HeroesPage = () => {
               {superheroData.map((hero, index) => {
                 return hero.biography.publisher === publisher ? (
                   <HeroCard
-                    handleDetails={handleDetails}
                     key={index}
                     name={hero.name}
                     image={hero.image.url}
