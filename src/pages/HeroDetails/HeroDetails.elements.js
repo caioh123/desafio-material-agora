@@ -25,6 +25,11 @@ export const Container = styled.div`
     img {
       display: none;
     }
+    width: 80%;
+
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
 
   @media (max-width: 385px) {
@@ -35,11 +40,9 @@ export const Container = styled.div`
 `;
 
 export const HeroContainer = styled.div`
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  width: 35%;
-  height: 60px;
+  width: 100%;
 `;
 
 export const MainSectionDetails = styled.section`
@@ -47,6 +50,12 @@ export const MainSectionDetails = styled.section`
   height: 70%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1000px) {
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const AliasesContainer = styled.div`
@@ -86,13 +95,14 @@ export const HeroGender = styled.h2`
 export const StatusContainer = styled.section`
   display: flex;
   justify-content: center;
-  height: 50%;
+  height: 60%;
   flex-direction: column;
 `;
 
 export const StatContainer = styled.div`
   display: flex;
   align-items: center;
+
   width: 80%;
   height: 80vh;
 `;

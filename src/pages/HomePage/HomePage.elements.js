@@ -59,7 +59,6 @@ export const SubmitButton = styled(Link)`
   box-shadow: inset 1px 2px 2px 1px #ffffff;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 42px;
-  border: 1px solid #dcdcdc;
   display: inline-block;
   cursor: pointer;
   color: #000;
@@ -69,7 +68,7 @@ export const SubmitButton = styled(Link)`
   padding: 7px 24px;
   text-decoration: none;
   align-self: center;
-  width: 45%;
+  width: 200px;
   display: flex;
   justify-content: center;
 
