@@ -68,12 +68,13 @@ export const SubmitButton = styled(Link)`
   padding: 7px 24px;
   text-decoration: none;
   align-self: center;
-  width: 200px;
+  width: 300px;
   display: flex;
   justify-content: center;
 
   @media (max-width: 750px) {
     font-size: 1rem;
+    width: 200px;
   }
 `;
 
