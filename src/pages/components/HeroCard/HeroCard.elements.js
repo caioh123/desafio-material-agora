@@ -22,12 +22,6 @@ export const Container = styled.div`
   }
 `;
 
-export const PokeName = styled.p`
-  margin-bottom: 0.2rem;
-  font-size: 1.2rem;
-  text-transform: capitalize;
-`;
-
 export const InfoContent = styled.div`
   display: flex;
   width: 100%;
@@ -40,20 +34,6 @@ export const InfoContent = styled.div`
   }
 `;
 
-export const TypesContent = styled.div`
-  display: flex;
-  padding-left: 0.6rem;
-`;
-
-export const Type = styled.div`
-  display: flex;
-  height: 2rem;
-  width: 5rem;
-  margin: 0.5rem 0.1rem;
-  border-radius: 5px;
-  align-items: center;
-  justify-content: center;
-`;
 export const HeroName = styled.p`
   margin-top: 0.5rem;
   font-size: 1.5rem;

@@ -55,8 +55,6 @@ export const Overlay = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.div``;
-
 export const SubmitButton = styled(Link)`
   box-shadow: inset 1px 2px 2px 1px #ffffff;
   background-color: rgba(0, 0, 0, 0.2);

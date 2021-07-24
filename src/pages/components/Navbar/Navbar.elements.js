@@ -15,17 +15,6 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavbarContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-
-  @media (max-width: 750px) {
-    justify-content: space-between;
-  }
-`;
-
 export const NavLogo = styled(Link)`
   color: #fff;
   cursor: pointer;
