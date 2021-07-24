@@ -27,7 +27,7 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 376px) {
+  @media (max-width: 385px) {
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -62,8 +62,8 @@ export const HeroTitle = styled.h1`
   margin-bottom: 5px;
   width: 300px;
 
-  @media (max-width: 376px) {
-    font-size: 1.5rem;
+  @media (max-width: 384px) {
+    font-size: 1.7rem;
   }
 `;
 
@@ -129,16 +129,16 @@ export const SubmitButton = styled.button`
     margin-top: 50px;
   }
 
-  @media (max-width: 376px) {
+  @media (max-width: 385px) {
     margin-top: 80px;
-    width: 210px;
+    width: 200px;
   }
 `;
 
 export const ButtonText = styled.p`
   font-size: 1.1rem;
 
-  @media (max-width: 376px) {
-    font-size: 1rem;
+  @media (max-width: 386px) {
+    font-size: 0.9rem;
   }
 `;

@@ -64,7 +64,7 @@ export const InputContainer = styled.div`
     height: 5vh;
 
     ::placeholder {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     @media (max-width: 50px) {

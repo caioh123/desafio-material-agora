@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Navbar } from "../components/Navbar/Navbar";
@@ -56,18 +56,6 @@ export const HeroDetails = () => {
   return (
     <>
       <Navbar />
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      {/* Same as */}
       <ToastContainer />
       <MainContainer>
         {hero.name && (
@@ -114,7 +102,7 @@ export const HeroDetails = () => {
                     <StatValue>{hero.powerstats.combat}</StatValue>
                   </StatContainer>
                 </StatusContainer>
-                <SubmitButton onClick={notify}>
+                <SubmitButton onClick={() => notify()}>
                   <ButtonText>
                     Escolher esse herói para salvar o mundo
                   </ButtonText>

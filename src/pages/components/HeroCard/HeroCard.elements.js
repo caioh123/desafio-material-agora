@@ -35,7 +35,7 @@ export const InfoContent = styled.div`
   flex-direction: column;
   align-items: center;
   img {
-    height: 120px;
+    height: 180px;
     margin: 0.8rem 0;
   }
 `;

@@ -21,7 +21,7 @@ export const HomePage = () => {
           <MainTitle>O mundo corre grande perigo</MainTitle>
           <MainDesc>
             O planeta Terra está prestes a ser destruído e só você pode nos
-            ajudar escolhendo o herói de sua preferência para salvar o mundo
+            ajudar escolhendo o herói de sua preferência para salvar o mundo.
           </MainDesc>
           <SubmitButton to="/heroes">Acessar a lista</SubmitButton>
         </MainRightContainer>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Navbar } from "../components/Navbar/Navbar";
 import { HeroCard } from "../components/HeroCard/HeroCard";
 import {
@@ -25,17 +25,20 @@ export const HeroesPage = () => {
     setSuperheroData(response.data.results);
   };
 
-  const handleChange = (e) => {
-    const searchTerm = e.target.value;
+  const handleChange = useCallback(
+    (e) => {
+      const searchTerm = e.target.value;
 
-    setSearchText(searchTerm);
-    if (searchTerm.length === 0) {
-      setSuperheroData([]);
-    }
-    if (searchTerm.length > 1) {
-      searchSuperHeroes();
-    }
-  };
+      setSearchText(searchTerm);
+      if (searchTerm.length === 0) {
+        setSuperheroData([]);
+      }
+      if (searchTerm.length > 1) {
+        searchSuperHeroes();
+      }
+    },
+    [searchText]
+  );
 
   return (
     <>

@@ -7,6 +7,10 @@ export const MainContainer = styled.main`
   height: 100vh;
   display: flex;
   background-color: rgb(25, 25, 32);
+
+  @media (max-width: 750px) {
+    height: 100vh;
+  }
 `;
 
 export const LeftContainer = styled.section`
@@ -19,6 +23,10 @@ export const LeftContainer = styled.section`
   height: 90%;
   display: flex;
   align-self: center;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const RightContainer = styled.section`
@@ -27,6 +35,10 @@ export const RightContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const Overlay = styled.div`
@@ -37,6 +49,10 @@ export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 2;
   position: absolute;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
 export const ButtonContainer = styled.div``;
@@ -50,7 +66,7 @@ export const SubmitButton = styled(Link)`
   cursor: pointer;
   color: #000;
   font-family: Verdana;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
   padding: 7px 24px;
   text-decoration: none;
@@ -58,6 +74,10 @@ export const SubmitButton = styled(Link)`
   width: 45%;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 750px) {
+    font-size: 1rem;
+  }
 `;
 
 export const MainRightContainer = styled.div`
@@ -78,9 +98,17 @@ export const MainTitle = styled.h1`
   font-family: "Open Sans", sans-serif;
   max-width: 90%;
   align-self: center;
+
+  @media (max-width: 750px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const MainDesc = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   opacity: 0.8;
+
+  @media (max-width: 750px) {
+    font-size: 1.3rem;
+  }
 `;
